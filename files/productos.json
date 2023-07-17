@@ -1,0 +1,103 @@
+[
+  {
+    "id": 1,
+    "title": "Keyboard",
+    "description": "Logitech ABC",
+    "price": 2500,
+    "thumbnail": "www.imagen2.com",
+    "code": "keyboard01",
+    "stock": 150
+  },
+  {
+    "id": 2,
+    "title": "Monitor",
+    "description": "Samsung DEF",
+    "price": 10000,
+    "thumbnail": "www.imagen3.com",
+    "code": "monitor01",
+    "stock": 50
+  },
+  {
+    "id": 3,
+    "title": "Headset",
+    "description": "Sony GHI",
+    "price": 5000,
+    "thumbnail": "www.imagen4.com",
+    "code": "headset01",
+    "stock": 80
+  },
+  {
+    "id": 4,
+    "title": "Webcam",
+    "description": "HP JKL",
+    "price": 3000,
+    "thumbnail": "www.imagen5.com",
+    "code": "webcam01",
+    "stock": 120
+  },
+  {
+    "id": 5,
+    "title": "Printer",
+    "description": "Epson MNO",
+    "price": 8000,
+    "thumbnail": "www.imagen6.com",
+    "code": "printer01",
+    "stock": 60
+  },
+  {
+    "id": 6,
+    "title": "Mouse",
+    "description": "Logitech XYZ",
+    "price": 1200,
+    "thumbnail": "www.imagen7.com",
+    "code": "mouse01",
+    "stock": 90
+  },
+  {
+    "id": 7,
+    "title": "Laptop",
+    "description": "Dell UVW",
+    "price": 30000,
+    "thumbnail": "www.imagen8.com",
+    "code": "laptop01",
+    "stock": 30
+  },
+  {
+    "id": 8,
+    "title": "Tablet",
+    "description": "Apple RST",
+    "price": 20000,
+    "thumbnail": "www.imagen9.com",
+    "code": "tablet01",
+    "stock": 70
+  },
+  {
+    "id": 9,
+    "title": "Smartphone",
+    "description": "Samsung QPR",
+    "price": 15000,
+    "thumbnail": "www.imagen10.com",
+    "code": "smartphone01",
+    "stock": 110
+  },
+  {
+    "id": 10,
+    "title": "Smartwatch",
+    "description": "Apple LMN",
+    "price": 9000,
+    "thumbnail": "www.imagen11.com",
+    "code": "smartwatch01",
+    "stock": 75
+  },
+  {
+    "id": 11,
+    "title": "_Smartphone",
+    "description": "_Samsung QPR",
+    "price": 105000,
+    "thumbnail": "_www.imagen10.com",
+    "category": "zapato",
+    "status": true,
+    "code": "_smartphone01",
+    "stock": 110
+  }
+]
