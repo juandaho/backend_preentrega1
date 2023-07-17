@@ -11,11 +11,18 @@ export class ProductManager {
   // Cargar productos desde el archivo de productos
   async getProduct(info = {}) {
     const { limit } = info;
-
+  
     try {
       if (existsSync(this.path)) {
         const productosLista = await fs.promises.readFile(this.path, "utf-8");
-        const productosListaJSON = JSON.parse(productosLista);
+        let productosListaJSON = JSON.parse(productosLista);
+        // Agregar un valor predeterminado para status si no se especifica
+        productosListaJSON = productosListaJSON.map(producto => {
+          return {
+            ...producto,
+            status: producto.status === undefined ? true : producto.status,
+          };
+        });
         this.productos = productosListaJSON; // actualizar la lista de productos
         if (limit) {
           return productosListaJSON.slice(0, limit);
@@ -85,16 +92,12 @@ export class ProductManager {
   }
 
   // Actualizar un producto y guardar los cambios en el archivo
-  async updateProduct(id, title, description, price, thumbnail, code, stock) {
-    if (
-      !id ||
-      !title ||
-      !description ||
-      !price ||
-      !thumbnail ||
-      !code ||
-      !stock
-    ) {
+  // Actualizar un producto y guardar los cambios en el archivo
+  async updateProduct(pid, obj) {
+    const id = parseInt(pid);
+    const { title, description, price, thumbnail, category, status=true, code, stock } = obj;
+    
+    if (!title || !description || !price || !thumbnail || !category || !code || !stock) {
       console.log("Ingrese los datos del producto para su actualización");
       return;
     } else {
@@ -108,6 +111,8 @@ export class ProductManager {
             price,
             thumbnail,
             code,
+            status,
+            category,
             stock,
           };
         } else {
@@ -119,19 +124,23 @@ export class ProductManager {
         this.path,
         JSON.stringify(nuevosProductosActuales, null, 2)
       );
+      console.log("Producto actualizado"); // Mensaje de registro
     }
   }
+  
 
-  // Eliminar un producto por ID y guardar los cambios en el archivo
-  async deleteProduct(id) {
-    const productosCompletos = await this.getProduct();
-    const productosActualizados = productosCompletos.filter(
-      (elemento) => elemento.id !== id
-    );
-    this.productos = productosActualizados;
-    await fs.promises.writeFile(
-      this.path,
-      JSON.stringify(productosActualizados, null, 2)
-    );
-  }
-}
+
+// Eliminar un producto por ID y guardar los cambios en el archivo
+async deleteProduct(id) {
+  id = parseInt(id); // Convertir id a número
+  const productosCompletos = await this.getProduct();
+  const productosActualizados = productosCompletos.filter(
+    (elemento) => elemento.id !== id
+  );
+  this.productos = productosActualizados;
+  await fs.promises.writeFile(
+    this.path,
+    JSON.stringify(productosActualizados, null, 2)
+  );
+  console.log(`Producto con ID ${id} eliminado`); // Mensaje de registro
+}}

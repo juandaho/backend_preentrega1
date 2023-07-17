@@ -6,7 +6,8 @@
     "price": 2500,
     "thumbnail": "www.imagen2.com",
     "code": "keyboard01",
-    "stock": 150
+    "stock": 150,
+    "status": true
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "price": 10000,
     "thumbnail": "www.imagen3.com",
     "code": "monitor01",
-    "stock": 50
+    "stock": 50,
+    "status": true
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "price": 5000,
     "thumbnail": "www.imagen4.com",
     "code": "headset01",
-    "stock": 80
+    "stock": 80,
+    "status": true
   },
   {
     "id": 4,
@@ -33,16 +36,8 @@
     "price": 3000,
     "thumbnail": "www.imagen5.com",
     "code": "webcam01",
-    "stock": 120
-  },
-  {
-    "id": 5,
-    "title": "Printer",
-    "description": "Epson MNO",
-    "price": 8000,
-    "thumbnail": "www.imagen6.com",
-    "code": "printer01",
-    "stock": 60
+    "stock": 120,
+    "status": true
   },
   {
     "id": 6,
@@ -51,7 +46,8 @@
     "price": 1200,
     "thumbnail": "www.imagen7.com",
     "code": "mouse01",
-    "stock": 90
+    "stock": 90,
+    "status": true
   },
   {
     "id": 7,
@@ -60,7 +56,8 @@
     "price": 30000,
     "thumbnail": "www.imagen8.com",
     "code": "laptop01",
-    "stock": 30
+    "stock": 30,
+    "status": true
   },
   {
     "id": 8,
@@ -69,7 +66,8 @@
     "price": 20000,
     "thumbnail": "www.imagen9.com",
     "code": "tablet01",
-    "stock": 70
+    "stock": 70,
+    "status": true
   },
   {
     "id": 9,
@@ -78,7 +76,8 @@
     "price": 15000,
     "thumbnail": "www.imagen10.com",
     "code": "smartphone01",
-    "stock": 110
+    "stock": 110,
+    "status": true
   },
   {
     "id": 10,
@@ -87,7 +86,8 @@
     "price": 9000,
     "thumbnail": "www.imagen11.com",
     "code": "smartwatch01",
-    "stock": 75
+    "stock": 75,
+    "status": true
   },
   {
     "id": 11,
@@ -98,6 +98,17 @@
     "category": "zapato",
     "status": true,
     "code": "_smartphone01",
+    "stock": 110
+  },
+  {
+    "id": 12,
+    "title": "_1Smartphone",
+    "description": "_1Samsung QPR",
+    "price": 105000,
+    "thumbnail": "_1www.imagen10.com",
+    "category": "1zapato",
+    "status": true,
+    "code": "_1smartphone01",
     "stock": 110
   }
 ]

@@ -27,4 +27,16 @@ router.post("/products", async (req,res) => {
     res.json({status:"success", productoNuevo});
 });
 
+router.put("/products/:id", async (req,res) => {
+    const productoActualizado = await manager.updateProduct(req.params.id, req.body);
+    res.json({status:"success", productoActualizado});
+});
+
+router.delete("/products/:id", async (req,res) => {
+    const productoBorrado = await manager.deleteProduct(req.params.id); // Obtener id de req.params
+    res.send({status:"success", productoBorrado});
+  });
+
+
+
 export default router;
