@@ -33,7 +33,7 @@ router.put("/products/:id", async (req,res) => {
 });
 
 router.delete("/products/:id", async (req,res) => {
-    const productoBorrado = await manager.deleteProduct(req.params.id); // Obtener id de req.params
+    const productoBorrado = await manager.deleteProduct(req.params.id); 
     res.send({status:"success", productoBorrado});
   });
 
